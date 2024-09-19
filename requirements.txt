@@ -1,11 +1,11 @@
-fastapi
+fastapi[standard]
 uvicorn
 streamlit
-tensorflow    # If using TensorFlow
-torch          # If using PyTorch
+tensorflow       # If using TensorFlow
+torch            # If using PyTorch
 opencv-python
 numpy
 pandas
 requests
-Pillow         # If using image processing
+Pillow           # If using image processing
 python-multipart
