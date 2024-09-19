@@ -1,5 +1,7 @@
+import os
 import uvicorn
-from src.app import app  # Assuming your FastAPI app is in src/app.py
+from src.app import app  # Adjust to your app's path
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=10000)
+    port = int(os.environ.get("PORT", 10000))  # Fetch the port from the environment
+    uvicorn.run(app, host="0.0.0.0", port=port)  # Bind to 0.0.0.0 and use the dynamic port
