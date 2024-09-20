@@ -1,8 +1,10 @@
 [build]
-  functions = "functions"
-  publish = "public"  # Adjust this if needed
+  functions = "functions"  # Directory for Netlify Functions
   command = "pip install -r requirements.txt"
 
 [dev]
-  command = "uvicorn functions.api:app --host 0.0.0.0 --port 8000"
+  command = "uvicorn main:app --host 0.0.0.0 --port 8000"
   port = 8000
+
+# If you have a static directory for any assets, uncomment the line below and set the path
+# publish = "public"
