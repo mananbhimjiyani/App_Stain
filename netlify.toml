@@ -1,0 +1,8 @@
+[build]
+  functions = "functions"
+  publish = "public"  # Adjust this if needed
+  command = "pip install -r requirements.txt"
+
+[dev]
+  command = "uvicorn functions.api:app --host 0.0.0.0 --port 8000"
+  port = 8000
